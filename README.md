@@ -21,6 +21,6 @@ i've got 99 problems and haskell ain't one
 
 # Test
 
-`cabal install --enable-tests
+`cabal install --enable-tests`
 
 `cabal test`
