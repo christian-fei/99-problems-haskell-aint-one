@@ -1,9 +1,9 @@
 module Lists where
 
-myLast :: [Int] -> Int
+myLast :: [a] -> a
 myLast = first . reverse
 
-myButLast :: [Int] -> Int
+myButLast :: [a] -> a
 myButLast = first . drop 1 . reverse
 
 elementAt :: [a] -> Int -> a
@@ -17,5 +17,5 @@ myReverse :: [a] -> [a]
 myReverse [] = []
 myReverse (x:xs) = myReverse xs ++ [x]
 
-first :: [Int] -> Int
+first :: [a] -> a
 first xs = xs !! 0
