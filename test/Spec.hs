@@ -29,3 +29,4 @@ main = hspec $ do
 
     it "isPalindrome" $ do
       isPalindrome [] `shouldBe` True
+      -- isPalindrome "mum" `shouldBe` True

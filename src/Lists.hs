@@ -19,7 +19,8 @@ myReverse (x:xs) = myReverse xs ++ [x]
 
 isPalindrome :: [a] -> Bool
 isPalindrome [] = True
-isPalindrome xs = False
+-- isPalindrome xs = head xs == myLast xs && isPalindrome (inner xs)
+--   where inner xs = reverse $ drop 1 $reverse $ drop 1 xs
 
 first :: [a] -> a
 first xs = xs !! 0
