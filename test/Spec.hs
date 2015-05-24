@@ -16,3 +16,6 @@ main = hspec $ do
 
     it "myButLast" $ do
       myButLast [1..10] `shouldBe` 9
+
+    it "elementAt" $ do
+      elementAt [1..10] 1 `shouldBe` 1
