@@ -17,5 +17,8 @@ myReverse :: [a] -> [a]
 myReverse [] = []
 myReverse (x:xs) = myReverse xs ++ [x]
 
+isPalindrome :: [a] -> Bool
+isPalindrome xs = False
+
 first :: [a] -> a
 first xs = xs !! 0
