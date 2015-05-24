@@ -19,3 +19,4 @@ main = hspec $ do
 
     it "elementAt" $ do
       elementAt [1..10] 1 `shouldBe` 1
+      elementAt "python" 2 `shouldBe` 'y'
