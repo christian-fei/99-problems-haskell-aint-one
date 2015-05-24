@@ -13,3 +13,6 @@ main = hspec $ do
       evaluate (myLast []) `shouldThrow` anyException
     it "myLast on singleton list" $ do
       myLast [1] `shouldBe` 1
+
+    it "myButLast" $ do
+      myButLast [1..10] `shouldBe` 9
