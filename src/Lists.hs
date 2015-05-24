@@ -10,7 +10,8 @@ elementAt :: [a] -> Int -> a
 elementAt xs i = xs !! (i - 1)
 
 myLength :: [a] -> Int
-myLength xs = 0
+myLength [] = 0
+myLength (x:xs) = 1 + myLength xs
 
 first :: [Int] -> Int
 first xs = xs !! 0
