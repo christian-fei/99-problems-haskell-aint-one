@@ -1,9 +1,10 @@
-module Spec where
+module Main where
 
 import Test.Hspec
+import Lists
 
 main :: IO ()
 main = hspec $ do
-  describe "tests" $ do
-    it "does something" $ do
-      head [1..10] `shouldBe` 1
+  describe "Lists" $ do
+    it "myLast" $ do
+      myLast [1..10] `shouldBe` 10
