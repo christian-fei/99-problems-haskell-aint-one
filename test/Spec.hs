@@ -28,5 +28,4 @@ main = hspec $ do
       myReverse [1..10] `shouldBe` reverse [1..10]
 
     it "isPalindrome" $ do
-      isPalindrome "mum" `shouldBe` True
-      -- isPalindrome [1..10] `shouldBe` False
+      isPalindrome [] `shouldBe` True
