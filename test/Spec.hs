@@ -11,3 +11,5 @@ main = hspec $ do
       myLast [1..10] `shouldBe` 10
     it "myLast on empty list" $ do
       evaluate (myLast []) `shouldThrow` anyException
+    it "myLast on singleton list" $ do
+      myLast [1] `shouldBe` 1
