@@ -1,7 +1,10 @@
 module Lists where
 
 myLast :: [Int] -> Int
-myLast xs = reverse xs !! 0
+myLast = first . reverse
 
 myButLast :: [Int] -> Int
-myButLast xs = (drop 1 $ reverse xs) !! 0
+myButLast = first . drop 1 . reverse
+
+first :: [Int] -> Int
+first xs = xs !! 0
