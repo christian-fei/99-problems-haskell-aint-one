@@ -23,3 +23,6 @@ main = hspec $ do
 
     it "myLength" $ do
       myLength [1..10] `shouldBe` 10
+
+    it "myReverse" $ do
+      myReverse [1..10] `shouldBe` reverse [1..10]
