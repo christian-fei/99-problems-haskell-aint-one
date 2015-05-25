@@ -27,6 +27,17 @@ main = hspec $ do
     it "myReverse" $ do
       myReverse [1..10] `shouldBe` reverse [1..10]
 
-    it "isPalindrome" $ do
-      isPalindrome [] `shouldBe` True
+    -- it "isPalindrome" $ do
+    --   isPalindrome [] `shouldBe` True
       -- isPalindrome "mum" `shouldBe` True
+
+    -- it "myFlatten" $ do
+    --   myFlatten [] `shouldBe` ([] :: [Int])
+    --   myFlatten [1..10] `shouldBe` [1..10]
+    --   myFlatten ([[1,2,3]] :: [[Int]]) `shouldBe` [1..3]
+
+    it "myCompress" $ do
+      myCompress [] `shouldBe` ([] :: [Int])
+      myCompress [1..10] `shouldBe` [1..10]
+      myCompress [1,1,2,3] `shouldBe` [1..3]
+      myCompress [1,1,2,3,1] `shouldBe` [1,2,3,1]

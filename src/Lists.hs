@@ -17,10 +17,17 @@ myReverse :: [a] -> [a]
 myReverse [] = []
 myReverse (x:xs) = myReverse xs ++ [x]
 
-isPalindrome :: [a] -> Bool
-isPalindrome [] = True
+-- isPalindrome :: Eq a => [a] -> Bool
+-- isPalindrome [] = True
 -- isPalindrome xs = head xs == myLast xs && isPalindrome (inner xs)
 --   where inner xs = reverse $ drop 1 $reverse $ drop 1 xs
+
+-- myFlatten :: [a] -> [a]
+-- myFlatten xs = xs
+
+myCompress :: Eq a => [a] -> [a]
+myCompress [] = []
+myCompress (x:xs) = [x] ++ (myCompress (dropWhile (\y -> x == y) xs))
 
 first :: [a] -> a
 first xs = xs !! 0
