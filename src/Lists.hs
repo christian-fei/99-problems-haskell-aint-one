@@ -27,7 +27,7 @@ myReverse (x:xs) = myReverse xs ++ [x]
 
 myCompress :: Eq a => [a] -> [a]
 myCompress [] = []
-myCompress (x:xs) = [x] ++ (myCompress (dropWhile (\y -> x == y) xs))
+myCompress (x:xs) = [x] ++ (myCompress (dropWhile (==x) xs))
 
 first :: [a] -> a
 first xs = xs !! 0
