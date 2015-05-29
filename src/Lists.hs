@@ -33,5 +33,8 @@ myPack :: Eq a => [a] -> [[a]]
 myPack [] = []
 myPack (x:xs) = (x : takeWhile (==x) xs) : (myPack (dropWhile (==x) xs))
 
+myEncode :: Eq a => [a] -> [(Int,a)]
+myEncode [] = []
+
 first :: [a] -> a
 first xs = xs !! 0

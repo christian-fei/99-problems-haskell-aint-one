@@ -46,3 +46,6 @@ main = hspec $ do
       myPack [1] `shouldBe` [[1]]
       myPack [1,1,2] `shouldBe` [[1,1],[2]]
       myPack "aaron" `shouldBe` ["aa","r","o","n"]
+
+    it "myEncode" $ do
+      myEncode "" `shouldBe` []
