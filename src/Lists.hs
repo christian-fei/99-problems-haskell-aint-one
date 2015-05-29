@@ -22,12 +22,16 @@ isPalindrome [] = True
 isPalindrome [_] = True
 isPalindrome xs  = (head xs) == (last xs) && (isPalindrome $ init $ tail xs)
 
--- myFlatten :: [a] -> [a]
--- myFlatten xs = xs
+--myFlatten :: [a] -> [a]
+--myFlatten xs = xs
 
 myCompress :: Eq a => [a] -> [a]
 myCompress [] = []
 myCompress (x:xs) = [x] ++ (myCompress (dropWhile (==x) xs))
+
+myPack :: Eq a => [a] -> [[a]]
+myPack [] = []
+myPack (x:xs) = (x : takeWhile (==x) xs) : (myPack (dropWhile (==x) xs))
 
 first :: [a] -> a
 first xs = xs !! 0

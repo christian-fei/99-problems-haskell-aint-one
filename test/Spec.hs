@@ -31,8 +31,8 @@ main = hspec $ do
       isPalindrome [1,2,3] `shouldBe` False
       isPalindrome "mum" `shouldBe` True
 
-    -- it "myFlatten" $ do
-    --   myFlatten [] `shouldBe` ([] :: [Int])
+    --it "myFlatten" $ do
+    --  myFlatten [] `shouldBe` ([] :: [Int])
     --   myFlatten [1..10] `shouldBe` [1..10]
     --   myFlatten ([[1,2,3]] :: [[Int]]) `shouldBe` [1..3]
 
@@ -41,3 +41,8 @@ main = hspec $ do
       myCompress [1..10] `shouldBe` [1..10]
       myCompress [1,1,2,3] `shouldBe` [1..3]
       myCompress [1,1,2,3,1] `shouldBe` [1,2,3,1]
+
+    it "myPack" $ do
+      myPack [1] `shouldBe` [[1]]
+      myPack [1,1,2] `shouldBe` [[1,1],[2]]
+      myPack "aaron" `shouldBe` ["aa","r","o","n"]
