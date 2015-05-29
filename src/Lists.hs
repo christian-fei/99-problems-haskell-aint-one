@@ -35,6 +35,9 @@ myPack (x:xs) = (x : takeWhile (==x) xs) : (myPack (dropWhile (==x) xs))
 
 myEncode :: Eq a => [a] -> [(Int,a)]
 myEncode [] = []
+myEncode (x:xs) = [(count,x)] ++ myEncode rest
+  where rest = dropWhile (==x) xs
+        count = foldl (\x acc -> acc + x) 0 xs
 
 first :: [a] -> a
 first xs = xs !! 0
