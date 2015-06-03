@@ -49,3 +49,4 @@ main = hspec $ do
 
     it "myEncode" $ do
       myEncode "a" `shouldBe` [(1,'a')]
+      myEncode "aabc" `shouldBe` [(2,'a'),(1,'b'),(1,'c')]
