@@ -35,11 +35,9 @@ myPack (x:xs) = (x : takeWhile (==x) xs) : (myPack (dropWhile (==x) xs))
 
 myEncode :: Eq a => [a] -> [(Int,a)]
 myEncode [] = []
-myEncode list@(x:xs) = [(count, x)] ++ myEncode rest
+myEncode list@(x:xs) = [(occurencies, x)] ++ myEncode rest
   where rest = dropWhile (==x) xs
-        count = length (takeWhile (==x) list)
-
-myEncode (x:xs) = [(1,x)]
+        occurencies = length $ takeWhile (==x) list
 
 first :: [a] -> a
 first xs = xs !! 0
